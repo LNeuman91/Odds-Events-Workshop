@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odds and Events</title>
-    <link rel="stylesheet" href="index.css" />
-    <script defer src="index.js"></script>
-  </head>
-  <body>
-    <h1>Odds and Events</h1>
-    <form>
-      <label>
-        Add a Number to the Bank
-        <input id="number" name="number" type="number" />
-      </label>
-      <button>Add Number</button>
-    </form>
-    <main>
-      <section id="numberBank">
-        <h2>Number Bank</h2>
-        <output></output>
-        <div>
-          <button id="sortOne">Sort 1</button>
-          <button id="sortAll">Sort All</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sorting App</title>
+    <style>
+        /* Optional basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        input, button {
+            margin: 5px 0;
+        }
+        .display-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Sorting App</h1>
+        <input type="text" id="number-input" placeholder="Enter a number" />
+        <button id="add-button">Add Number</button>
+        <button id="sort-one-button">Sort 1</button>
+        <button id="sort-all-button">Sort All</button>
+
+        <div class="display-section">
+            <h2>Number Bank</h2>
+            <div id="number-bank"></div>
         </div>
-      </section>
-      <section id="sortedNumbers">
-        <h2>Sorted Numbers</h2>
-        <section id="odds">
-          <h3>Odds</h3>
-          <output></output>
-        </section>
-        <section id="evens">
-          <h3>Evens</h3>
-          <output></output>
-        </section>
-      </section>
-    </main>
-  </body>
+
+        <div class="display-section">
+            <h2>Sorted Numbers</h2>
+            <h3>Odds</h3>
+            <div id="odds-display"></div>
+            <h3>Evens</h3>
+            <div id="evens-display"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
 </html>
